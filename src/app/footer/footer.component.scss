@@ -1,0 +1,135 @@
+
+
+
+
+    .border-shape {
+    background: blue none repeat scroll 0 0;
+    color: #fff;
+    display: block;
+    height: 3px;
+    left: 0;
+    margin: 20px auto;
+    position: relative;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 80px;
+    }
+
+    .border-shape::before {
+    background: blue none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 80px;
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    top: 1px;
+    width: 100px;
+    }
+
+    .border-shape::after {
+    background: blue none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    margin: 0 auto;
+    position: absolute;
+    right: 80px;
+    text-align: center;
+    top: 1px;
+    width: 100px;
+    }
+
+
+
+  /*FOOTER*/
+  footer{
+    width:100%;
+
+    color:#fff;
+    bottom: 1;
+    }
+
+
+    .top_header section{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    }
+
+
+
+    footer .border-shape {
+    width: 40%;
+    }
+
+    footer .border-shape::before {
+    width: 100%;
+    left:120px;
+    }
+
+    footer .border-shape::after {
+    width: 100%;
+    right:120px;
+    }
+
+    footer .bottom_content section{
+    padding:1.5rem 2rem;
+    display:flex;
+    align-items:center;
+    justify-content:Center;
+    }
+
+
+
+
+    .copyright{
+      padding:0.8em 0;
+      background-color:transparent !important;
+      text-align:center; letter-spacing: 1px;font-family: monospace;
+      color:rgba(255,255,255);
+      }
+
+
+
+    @media (max-width:768px){
+footer{
+  width: 900px;
+}
+    .top_header{
+    padding:1rem;
+    display:block;
+    }
+
+    .top_header section{
+    margin:20px 0;
+    align-items:left;
+    justify-content:left;
+    }
+    footer .bottom_content section{
+    padding:1rem;
+    display:block;
+    text-align: center;
+    }
+    footer .bottom_content section a{
+
+    font-size:x-large;
+    margin:0 5px;
+    display:inline-block;
+    text-align: center;
+
+    }
+    .copyright{
+      padding:0.8em 0;
+      background-color:#1e1e1e;
+      text-align:center;
+      color:rgba(255,255,255);
+      font-size:large;letter-spacing: 3px;
+      }
+
+    }
+
+

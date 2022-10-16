@@ -1,0 +1,278 @@
+<div class="contact">
+  <div
+    fxLayoutAlign="center center "
+    style="
+    margin: 75px 0px 60px 0px ;letter-spacing: 2px;
+    font-family: 'Black Bones Personal Use', sans-serif;
+    "
+    class="animate-gradient-text reveal bounceInUp">
+    Contact US
+  </div>
+  <div
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayout.sm="column"
+    fxLayoutAlign="center">
+    <div fxLayoutAlign="center" style="transform: translatex(-50px)">
+      <div id="hire">
+        <form [formGroup]="myMessage">
+
+
+
+
+
+
+
+          <div style="margin-top: 29px" class="field name-box reveal zoomInDown
+            ">
+            <input
+              matInput
+              formControlName="name"
+              type="text"
+              id="name"
+              placeholder="Your Name"
+              minlength="3"
+              />
+            <label style="padding-left: 15px; padding-right: 15px" for="name"><i
+                class="fa fa-user" aria-hidden="true"></i></label>
+            <div
+              class="error"
+              *ngIf="
+              myMessage.get('name').hasError('required') &&
+              myMessage.get('name').touched
+              ">
+              Name must be at least 3 characters long
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="field email-box reveal zoomIn">
+            <input
+              matInput
+              formControlName="email"
+              type="text"
+              id="email"
+              placeholder="E-mail Adresse"
+              />
+            <label style="padding-left: 15px; padding-right: 15px" for="email"><i
+                class="fa fa-envelope" aria-hidden="true"></i></label>
+            <span class="ss-icon">check</span>
+            <div
+              class="error"
+              *ngIf="
+              myMessage.get('email').hasError('required') &&
+              myMessage.get('email').touched
+              ">
+              Email must be filled
+            </div>
+
+            <div
+              class="error"
+              *ngIf="
+              myMessage.get('email').hasError('email') &&
+              !myMessage.get('email').hasError('required')
+              ">
+              Email is not valid
+            </div>
+            <div
+              class="error"
+              *ngIf="
+              myMessage.get('email').hasError('email') &&
+              !myMessage.get('email').hasError('minLengh')
+              ">
+              Email is not valid
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+          <div class="field msg-box reveal zoomInUp">
+            <textarea
+              id="msg"
+              rows="4"
+              formControlName="msg"
+              placeholder="Your message ..."></textarea>
+            <label style="padding-left: 15px; padding-right: 15px" for="msg"><i
+                class="fa fa-comment" aria-hidden="true"></i></label>
+            <span class="ss-icon">check</span>
+            <div
+              class="error"
+              *ngIf="
+              myMessage.get('msg').hasError('required') &&
+              myMessage.get('msg').touched
+              ">
+              Email must be filled
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+          <div style="text-align: start" class="login-box ">
+
+            <button
+              type="button"
+              (click)="send()"
+              [disabled]="myMessage.invalid">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <a href="mailto:najmejarray@gmail.com"> Send Message</a>
+
+          </button>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+      </div>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="center">
+      <div class="content ccc" style="margin-right: 25px">
+        <!-- card -->
+        <a
+          href="https://github.com/JARRAY-NAJEM"
+          target="_blank"
+          class="carda reveal zoomInLeft"
+          fxLayout="row">
+          <div class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/128/2504/2504911.png" width="50px" alt="" />
+          </div>
+          <div>
+            <p class="title">GitHub</p>
+            <a class="links">https://github.com/JARRAY-NAJEM</a>
+          </div>
+        </a>
+        <a
+          href="https://codepen.io/NJM-FSD-MEAN"
+          target="_blank"
+          class="carda reveal zoomInLeft"
+          fxLayout="row">
+          <div class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/128/7083/7083977.png" width="50px" alt="" />
+          </div>
+          <div>
+            <p class="title">CodePen</p>
+            <a class="links">https://codepen.io/NJM-FSD-MEAN</a>
+          </div>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/najmeddine-jarray-531420238/"
+          target="_blank"
+          class="carda reveal zoomInLeft"
+          fxLayout="row">
+          <div class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/128/1384/1384171.png" width="50px" alt="" />
+          </div>
+          <div>
+            <p class="title">LinkedIn</p>
+            <a class="links">in/najmeddine-jarray-531420238/</a>
+          </div>
+        </a>
+        <a class="carda reveal zoomInLeft" target="_blank" fxLayout="row">
+          <div class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/128/3865/3865766.png" width="50px" alt="" />
+          </div>
+          <div>
+            <p class="title">WhatsApp</p>
+            <a class="links">+21628259497</a>
+          </div>
+        </a>
+      </div>
+
+
+
+
+
+      <div class="content" style="margin-right: 25px">
+        <a
+          href="https://www.instagram.com/jarray__najmeddine/"
+          target="_blank"
+          class="carda reveal zoomInRight"
+          fxLayout="row">
+          <div class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/128/4923/4923005.png" width="50px" alt="" />
+          </div>
+          <div>
+            <p class="title">Instagram</p>
+            <a class="links">jarray__najmeddine/</a>
+          </div>
+        </a>
+        <a
+          href="https://www.facebook.com/najmestar"
+          target="_blank"
+          class="carda reveal zoomInRight"
+          fxLayout="row">
+          <div class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/128/1384/1384168.png" width="50px" alt="" />
+          </div>
+          <div>
+            <p class="title">Facebook</p>
+            <a class="links">https://www.facebook.com/najmestar</a>
+          </div>
+        </a>
+        <a
+          href="https://twitter.com/Najem_jarray"
+          target="_blank"
+          class="carda reveal zoomInRight"
+          fxLayout="row">
+          <div class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/128/747/747882.png" width="50px" alt="" />
+          </div>
+          <div>
+            <p class="title">Twitter</p>
+            <a class="links">https://twitter.com/Najem_jarray</a>
+          </div>
+        </a>
+        <a class="carda reveal zoomInRight" fxLayout="row">
+          <div class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/128/8109/8109508.png" width="50px" alt="" />
+          </div>
+          <div>
+            <p class="title">Gmail</p>
+            <a class="links">najmejarray@gmail.com</a>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

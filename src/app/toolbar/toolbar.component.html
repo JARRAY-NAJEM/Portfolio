@@ -1,0 +1,141 @@
+<div id="navbar " style="background-color: blue;width: 100%;">
+    <header class="header" id="header">
+        <nav
+            class="nav container"
+            fxLayout="row"
+            fxLayoutAlign="space-evenly center"
+            fxLayoutAlign.xl="space-evenly center"
+            fxLayoutAlign.xs="space-evenly center"
+            fxLayoutAlign.sm="space-evenly center"
+            fxLayoutAlign.gt-lg="space-evenly center"
+        >
+            <a href="#" class="nav__logo">
+                <img
+                    src="https://scontent.xx.fbcdn.net/v/t1.15752-9/311470797_800734584313988_3585090628429552023_n.png?_nc_cat=106&ccb=1-7&_nc_sid=aee45a&_nc_ohc=V2UyTpMVgmkAX-mcSCY&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTfL5ajiMXHqmT2456TsTqSrYgEPGXqkIGHnS8OeOkqTg&oe=6371EFB5"
+                    alt=""
+                    width="100px"
+                    height="50px"
+                >
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <img src="https://cdn-icons-png.flaticon.com/128/747/747846.png" class="bx bx-home-alt nav__icon">
+                            <span class="nav__name">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#serv" class="nav__link">
+                            <img src="https://cdn-icons-png.flaticon.com/128/7106/7106322.png" class="bx bx-home-alt nav__icon">
+                            <span class="nav__name">services</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <img src="https://cdn-icons-png.flaticon.com/128/5807/5807584.png" class="bx bx-home-alt nav__icon">
+                            <span class="nav__name">About us</span>
+                        </a>
+                    </li>
+                    <!-- <li class="nav__item">
+                   <a routerLink="/skills" class="nav__link">
+                       <i class='bx bx-book-alt nav__icon'></i>
+                       <span class="nav__name">Skills</span>
+                   </a>
+               </li> -->
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <img src="https://cdn-icons-png.flaticon.com/128/4083/4083802.png" class="bx bx-home-alt nav__icon">
+                            <span class="nav__name">Contact us</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+</div>
+<div fxLayoutAlign="center" fxLayout="column">
+<section style="margin-top:5% ;" id="home">
+    <div class="container">
+        <div class="text-container">
+            <app-home></app-home>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+<section id="serv">
+    <div class="container reveal fade-left">
+        <div class="text-container">
+            <!-- <div class="divider div-transparent div-dot"></div> -->
+            <app-serv></app-serv>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+<section id="about">
+    <div class="container reveal fade-left">
+        <div class="text-container">
+            <!-- <div class="divider div-transparent div-dot"></div> -->
+            <app-about></app-about>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+<section  >
+    <div class="container reveal fade-left">
+        <div class="text-container">
+             <!-- <div class="divider div-transparent div-dot"></div> -->
+            <app-experience></app-experience>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+<div fxLayoutAlign="center" class="bewho reveal zoomInDown ">
+    ”Be who you needed when you were younger”
+</div>
+<section id="contact">
+    <div class="container reveal fade-left">
+        <div class="text-container">
+            <!-- <div class="divider div-transparent div-dot"></div> -->
+            <app-contact></app-contact>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>
+<div class="lang">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<div class="about">
+    <a class="bg_links social home" href="#home">
+        <span class="icon"></span>
+    </a>
+    <a class="bg_links social serv" href="#serv">
+        <span class="icon"></span>
+    </a>
+    <a class="bg_links social abt" href="#about">
+        <span class="icon"></span>
+    </a>
+    <a class="bg_links social contact" href="#contact">
+        <span class="icon"></span>
+    </a>
+    <a class="bg_links logo"></a>
+</div>
+</div>

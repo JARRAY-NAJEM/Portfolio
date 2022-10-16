@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>NJM JR</title>
+        <base href="/">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="./assets/log.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="http://fonts.cdnfonts.com/css/black-bones-personal-use" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins" rel="stylesheet">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/black-bones-personal-use">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="./assets">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    </head>
+    <body class="mat-typography">
+        <app-root></app-root>
+        <script type="text/javascript">
+
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+
+  var currentScrollpos = window.pageYOffset;
+  if(prevScrollpos > currentScrollpos) {
+        document.getElementById("header").style.top = "0px";
+  } else {
+        document.getElementById("header").style.top = "-222px";
+  }
+
+  prevScrollpos = currentScrollpos;
+
+  }
+        </script>
+        <script type="text/javascript">
+    const card = document.querySelector('.card');
+
+    const cardMovement = (e) => {
+
+      if(e.target.classList.contains('card')){
+
+        const card = e.target;
+        const coordBox = card.getBoundingClientRect();
+        const centerPointX = coordBox.x + coordBox.width ;
+        const centerPointY = coordBox.y + coordBox.height ;
+        const centerPoint = `${centerPointX} || ${centerPointY}`;
+
+        const maxRotation = 20;
+
+        //Y rotation
+        const rotationFactorY = maxRotation / (coordBox.width );
+        const yRotation = Math.ceil( (e.clientX - centerPointX) * rotationFactorY );
+
+        //X rotation
+        const rotationFactorX = maxRotation / (coordBox.height );
+        const xRotation = -1 * Math.ceil( (e.clientY - centerPointY) * rotationFactorX );
+
+        card.style.cssText = `transform: rotateY(${yRotation}deg) rotateX(${xRotation}deg);`;
+
+
+
+      }
+
+    }
+
+
+    const cardMovementStop = (e) => {
+
+      if(e.target.classList.contains('card')){
+
+        card.style.cssText = `transform: rotateY(0deg) rotateX(0deg);`;
+
+      }
+
+    }
+
+    document.addEventListener('mousemove', cardMovement);
+    document.addEventListener('mouseout', cardMovementStop);
+
+
+
+    $(function () {
+
+      (function autoChange() {
+        $('.notes .note_list li.active').each(function () {
+          if (! $(this).is(':last-of-type')) {
+            $(this).delay(500).fadeOut(500, function () {
+              $(this).removeClass('active').next().addClass('active').fadeIn(500);
+              autoChange();
+            });
+          } else {
+            $(this).delay(500).fadeOut(500, function () {
+              $(this).removeClass('active').parent('.note_list').find('li:eq(0)').addClass('active').fadeIn(500);
+              autoChange();
+            });
+          }
+        });
+      })();
+    });
+        </script>
+        <script>
+
+$('textarea').blur(function () {
+  $('#hire textarea').each(function () {
+      $this = $(this);
+      if ( this.value != '' ) {
+        $this.addClass('focused');
+        $('textarea + label + span').css({'opacity': 1});
+      }
+      else {
+        $this.removeClass('focused');
+        $('textarea + label + span').css({'opacity': 0});
+      }
+  });
+});
+
+$('#hire .field:first-child input').blur(function () {
+  $('#hire .field:first-child input').each(function () {
+      $this = $(this);
+      if ( this.value != '' ) {
+        $this.addClass('focused');
+        $('.field:first-child input + label + span').css({'opacity': 1});
+      }
+      else {
+        $this.removeClass('focused');
+        $('.field:first-child input + label + span').css({'opacity': 0});
+      }
+  });
+});
+
+$('#hire .field:nth-child(2) input').blur(function () {
+  $('#hire .field:nth-child(2) input').each(function () {
+      $this = $(this);
+      if ( this.value != '' ) {
+        $this.addClass('focused');
+        $('.field:nth-child(2) input + label + span').css({'opacity': 1});
+      }
+      else {
+        $this.removeClass('focused');
+        $('.field:nth-child(2) input + label + span').css({'opacity': 0});
+      }
+  });
+});
+        </script>
+        <script>
+
+  let section = document.querySelectorAll("section");
+  let menu = document.querySelectorAll("header nav a");
+
+  window.onscroll = () => {
+    section.forEach((i) => {
+      let top = window.scrollY;
+      let offset = i.offsetTop - 10;
+      let height = i.offsetHeight;
+      let id = i.getAttribute("id");
+
+      if (top >= offset && top < offset + height) {
+        menu.forEach((link) => {
+          link.classList.remove("active");
+          document
+            .querySelector("header nav a[href*=" + id + "]")
+            .classList.add("active");
+        });
+      }
+    });
+  };
+
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 10;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", reveal);
+
+  // To check the scroll position on page load
+  reveal();
+        </script>
+    </body>
+</html>

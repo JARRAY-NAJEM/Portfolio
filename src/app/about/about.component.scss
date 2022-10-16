@@ -1,0 +1,387 @@
+@import url("http://fonts.cdnfonts.com/css/black-bones-personal-use");
+.the {
+  margin-top: 2%;
+  color: white;
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: bold;
+}
+.njma {
+  font-family: "Black Bones Personal Use", sans-serif;
+  color: white;
+
+  font-size: 25px;
+
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.best {
+  display: flex;
+}
+
+.bbest {
+  padding: 15px 20px;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  background: #444444;
+  border-radius: 25px 0px 25px 0px;
+  margin: 0 10px;
+  transition: 0.1s;
+
+}
+
+.bbest:focus {
+  outline: none;
+}
+
+.hovera:hover {
+  transition: 0.3s;
+  color: rgb(255, 255, 255);
+  background: rgb(247, 30, 30);
+
+  transform: scale(1.1) rotate(0deg);
+}
+.hoverf:hover {
+  transition: 0.3s;
+  color: rgb(255, 255, 255);
+  background: rgb(30, 56, 247);
+
+  transform: scale(1.1) rotate(0deg);
+}
+.hovern:hover {
+  transition: 0.3s;
+  color: rgb(255, 255, 255);
+  background: green;
+
+  transform: scale(1.1) rotate(0deg);
+}
+.hoverj:hover {
+  transition: 0.3s;
+  color: rgb(107, 107, 107);
+  background: yellow;
+
+  transform: scale(1.1) rotate(0deg);
+}
+
+.animate-gradient-text {
+  letter-spacing: 1px;
+
+  margin-bottom: 1.5%;
+
+  font-size: 35px;
+  font-family: monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.animate-gradient-text {
+  color: #2c63db;
+}
+
+
+@import url("http://fonts.cdnfonts.com/css/black-bones-personal-use");
+
+/* CSS */
+.button-86 {
+  all: unset;
+
+  font-size: x-large;
+  background: red;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  padding: 15px 35px;
+  margin: 35px 0px;
+  text-decoration: none;
+  font-family: "Black Bones Personal Use", sans-serif;
+  letter-spacing: 3px;
+
+  background: rgb(50, 58, 77);
+  border-radius: 25px 0px;
+}
+
+.button-86::after,
+.button-86::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all 0.3s;
+}
+
+.button-86::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+
+  border-radius: 15px 0px;
+}
+
+.button-86::after {
+  transform: translate(0px, 0px);
+  width: 20px;
+  height: 20px;
+  background: #00f;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button-86:hover::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  border-radius: 25px 0px;
+}
+
+.button-86:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+  background: #00f;
+  border-radius: 25px 0px;
+}
+
+.button-86:active::after {
+  transition: 0s;
+  transform: translate(0, 0%);
+}
+.button-86:hover {
+  transform: scale(1.15) rotate(0deg);
+  transition: 0.25s;
+}
+
+
+.notes {
+  color: rgb(255, 255, 255);
+  text-align: center;
+
+  width: 110px;
+
+  .note_title {
+    padding: 5px 10px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+  }
+  .note_list {
+    position: relative;
+
+    li {
+      text-align: center;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+.sous-icon {
+  font-weight: bold;
+  font-family: "Black Bones Personal Use", sans-serif;
+  font-size: x-large;
+  margin: 30px 0px 0px 0px;
+  letter-spacing: 2px;
+}
+
+.bsous {
+  padding: 20px 20px;
+  text-decoration: none;
+  position: absolute;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  background: blue;
+  border-radius: 25px 0px;
+  margin-right: 100px;
+  transform: translate(15px, -5px);
+
+  transition: 0.5s;
+  // box-shadow: 3px 3px 0 rgb(255, 255, 255);
+  // transform: skewX(-15deg);
+}
+.ppp {
+  font-size: large;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgb(190, 184, 184);
+  line-height: 130%;
+}
+
+.life{
+
+  border: 2px dashed blue;
+  padding: 50px;
+  border-radius: 15% 5% 15% 5%;
+  width: 80%;
+  height: 80%;
+  margin: 15px;
+
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    max-width: 100vw;
+    min-height: 100vw;
+
+    transform: translate(60vw);
+
+
+
+    .active.zoomInRight {
+   text-align: center;
+margin-left: 60px;
+    }
+
+    .active.zoomInLeft {
+   text-align: center;
+    }
+
+    .life{
+
+      border: 2px dashed blue;
+      padding: 50px auto;
+      border-radius: 15% 5% 15% 5%;
+      width: 100%;
+      height: 100%;
+      margin: 15px auto;
+
+    }
+
+
+
+
+
+
+
+    .ppp {
+      font-size: large;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: rgb(190, 184, 184);
+      line-height: 130%;
+    }
+
+
+    .the {
+      margin-top: 2%;
+      color: white;
+      font-family: monospace;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    .njma {
+      font-family: "Black Bones Personal Use", sans-serif;
+      color: white;
+
+      font-size: 25px;
+
+      font-weight: bold;
+      letter-spacing: 5px;
+    }
+
+    .best {
+      display: flex;
+    }
+
+    .bbest {
+      padding: 15px 20px;
+      text-decoration: none;
+      font-family: monospace;
+      font-size: large;
+      font-weight: bold;
+      color: white;
+      background: #444444;
+      border-radius: 25px 0px 25px 0px;
+      margin: 0 10px;
+
+      transition: 0.1s;
+      // box-shadow: 3px 3px 0 rgb(255, 255, 255);
+      // transform: skewX(-15deg);
+    }
+
+    .bbest:focus {
+      outline: none;
+    }
+
+    .hovera:hover {
+      transition: 0.3s;
+      color: rgb(255, 255, 255);
+      background: rgb(247, 30, 30);
+
+      transform: scale(1.1) rotate(0deg);
+    }
+    .hoverf:hover {
+      transition: 0.3s;
+      color: rgb(255, 255, 255);
+      background: rgb(30, 56, 247);
+
+      transform: scale(1.1) rotate(0deg);
+    }
+    .hovern:hover {
+      transition: 0.3s;
+      color: rgb(255, 255, 255);
+      background: green;
+
+      transform: scale(1.1) rotate(0deg);
+    }
+    .hoverj:hover {
+      transition: 0.3s;
+      color: rgb(107, 107, 107);
+      background: yellow;
+
+      transform: scale(1.1) rotate(0deg);
+    }
+
+    .animate-gradient-text {
+      letter-spacing: 1px;
+
+      margin-bottom: 1.5%;
+
+      font-size: 35px;
+      font-family: monospace;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .animate-gradient-text {
+      // background-image: linear-gradient(to right, #f21ac7, #ff0042);
+
+      // -webkit-text-fill-color: transparent;
+      // -webkit-background-clip: text;
+      // background-clip: text;
+      color: #2c63db;
+    }
+  }
+}
+
+.active.zoomInRight {
+  animation-duration: 1.5s;
+  -webkit-animation-name: zoomInRight;
+  animation-name: zoomInRight;
+}
+
+.active.zoomInLeft {
+  animation-duration: 1.5s;
+  -webkit-animation-name: zoomInLeft;
+  animation-name: zoomInLeft;
+}
+.active.flipInX {
+  animation-duration: 3s;
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
+}
+
